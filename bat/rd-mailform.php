@@ -1,6 +1,7 @@
 <?php
 
 $recipients = 'cesareomargtz@gmail.com';
+$addresses = 'cesareomargtz@gmail.com';
 //$recipients = '#';
 
 try {
