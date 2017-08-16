@@ -417,7 +417,7 @@
                         <div class="col-sm-4">
                             <div data-wow-delay=".4s" class="thumbnail thumbnail-4 wow fadeIn"><img src="images/scp/libro.png" alt="" class="img-wide">
                                 <div class="caption">
-                                    <h1 class="small"><a href="#">LIBRO</a></h1>
+                                    <h1 class="small"><a href="#openModal">LIBRO</a></h1>
                                     <h4 class="text-dark">Historia, rigenes y evolución de Salvador Corral Piñòn.</h4>
                                     <hr>
                                     <ul class="list-inline text-dark big">
@@ -429,6 +429,7 @@
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="col-sm-4">
                             <div data-wow-delay=".6s" class="thumbnail thumbnail-4 wow fadeIn"><img src="images/scp/galeria.png" alt="" class="img-wide">
                                 <div class="caption">
@@ -447,7 +448,36 @@
                     </div>
                 </div>
             </section>
-
+            <div id="openModal" class="modalDialog">
+                
+                <form method="post" action="bat/rd-mailform.php" class="rd-mailform modalDownload">
+                    <a href="#close" title="Close" class="close">X</a>
+                    <center>
+                        <h3 style="aling:center;">Descargar Libro</h3>
+                    </center>
+                  <!--RD Mailform Type-->
+                  <input type="hidden" name="form-type" value="contact">
+                  <!--END RD Mailform Type-->
+                  <div class="form-group">
+                    <label for="exampleInputText1"></label>
+                    <input type="text" placeholder="Nombre" name="name" data-constraints="@NotEmpty @LettersOnly" id="exampleInputText1" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1"></label>
+                    <input placeholder="Correo Electronico" type="text" name="email" data-constraints="@NotEmpty @Email" id="exampleInputEmail1" class="form-control">
+                  </div>
+                  <div class="form-group" id="hidement">
+                    <label for="exampleInputText2"></label>
+                    <input type="text" placeholder="Asunto" name="name2" data-constraints="@NotEmpty " id="exampleInputText2" class="form-control" value="Descarga de Libro SCP">
+                  </div>
+                  <div class="form-group textarea">
+                    <label for="exampleTextarea"></label>
+                    <textarea id="exampleTextarea" rows="3" placeholder="Mensaje..." name="message" data-constraints="@NotEmpty" class="form-control"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary"><a  href="http://54.190.53.141/Cuauhtémoc%20Tierra%20de%20Oportunidades%20libro%20ichicult.pdf"  target="Starfall" >Descargar</a></button>
+                  <div class="mfInfo"></div>
+                </form>
+            </div>
             <!--Start section-->
             <section class="well text-center bg-dark-blue-3">
                 <div class="container container-wide">
